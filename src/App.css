@@ -239,7 +239,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Banner Css ************/
 .banner {
-  margin-top: 0;
+  margin-top: 40px;
   padding: 260px 0 100px 0;
   /* background-image: url('./assets/img/banner-bg.png'); */
   background-position: top center;
