@@ -9,7 +9,7 @@ export default function () {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(70 - Math.random() * 5);
     const [index, setIndex] = useState(1);
-    const toRotate = ["Visual Effects", "Paintings", "Simping"];
+    const toRotate = ["Visual FX", "Paintings", "Simping"];
     const period = 1500;
 
     useEffect(() => {
@@ -56,7 +56,7 @@ export default function () {
                         <button onClick={() => console.log('connect')}>Go To Projects <ArrowRightCircle size={25} color={'#0204fa'} /></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="Header Image" />
+                        <img className="banner-img" src={headerImg} alt="Header Image" />
                     </Col>
                 </Row>
             </Container>
