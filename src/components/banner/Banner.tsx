@@ -51,7 +51,7 @@ export default function () {
                 <Row className='align-items-center'>
                     <Col xs={12} md={6} xl={7}>
                         <span className='tagline'>Welcome to my domain</span>
-                        <h1><span className='wrap'>{text}</span></h1>
+                        <div className="heading"><h1><span className='wrap'>{text}</span></h1></div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam minus ab dolore delectus, labore, corrupti quae eveniet laudantium reiciendis animi, sint laborum ut qui harum. Accusamus fugit tempore atque dolorem.</p>
                         <button onClick={() => console.log('connect')}>Go To Projects <ArrowRightCircle size={25} color={'#0204fa'} /></button>
                     </Col>
