@@ -28,6 +28,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -37,6 +38,7 @@ body {
   background-color: rgba(217, 217, 217, 255) !important;
   color: rgba(69, 69, 69, 255) !important;
   font-family: 'Centra', sans-serif !important;
+  overflow-x: hidden;
 }
 
 h1,
