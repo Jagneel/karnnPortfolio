@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { ArrowRightCircle } from "react-bootstrap-icons"
+import { Link } from 'react-router-dom';
 import headerImg from "../../assets/img/header-img.svg"
+import 'animate.css'
+import TrackVisibility from 'react-on-screen'
 
 export default function () {
     const [loopNum, setLoopNum] = useState(0);
@@ -45,15 +48,24 @@ export default function () {
         }
     }
 
+
     return (
         <section className='banner' id='home'>
             <Container>
                 <Row className='align-items-center'>
                     <Col xs={12} md={6} xl={7}>
-                        <span className='tagline'>Welcome to my domain</span>
-                        <div className="heading"><h1><span className='wrap'>{text}</span></h1></div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam minus ab dolore delectus, labore, corrupti quae eveniet laudantium reiciendis animi, sint laborum ut qui harum. Accusamus fugit tempore atque dolorem.</p>
-                        <button onClick={() => console.log('connect')}>Go To Projects <ArrowRightCircle size={25} color={'#0204fa'} /></button>
+                        <TrackVisibility>
+                            {({ isVisible }) =>
+                                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                                    <span className='tagline'>Welcome to my domain</span>
+                                    <div className="heading"><h1><span className='wrap'>{text}</span></h1></div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam minus ab dolore delectus, labore, corrupti quae eveniet laudantium reiciendis animi, sint laborum ut qui harum. Accusamus fugit tempore atque dolorem.</p>
+                                </div>
+                            }
+                        </TrackVisibility>
+                        <a href='/#projects'>
+                            <button onClick={() => console.log('connect')}>Go To Projects <ArrowRightCircle size={25} color={'#0204fa'} /></button>
+                        </a>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img className="banner-img" src={headerImg} alt="Header Image" />
@@ -61,6 +73,6 @@ export default function () {
                 </Row>
             </Container>
 
-        </section>
+        </section >
     )
 }

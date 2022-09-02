@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import TrackVisibility from "react-on-screen";
 
 export default function Contact () {
     const formInitialDetails = {
@@ -41,8 +42,12 @@ export default function Contact () {
     };
 
     return (
-        <section className="contact" id="connect">
+        <section className="contact" id="contact">
             <Container>
+                <TrackVisibility>
+                {({isVisible}) => 
+                <div className={isVisible ? 'animate__animated animate__fadeInUp' : ''}>
+
                 <Row className="align-items-center">
                     <Col size={12} md={6}>
                                 <div >
@@ -76,6 +81,9 @@ export default function Contact () {
                                 </div>
                     </Col>
                 </Row>
+                </div>
+                }
+                </TrackVisibility>
             </Container>
         </section>
     )

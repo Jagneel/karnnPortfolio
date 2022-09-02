@@ -41,7 +41,8 @@ export default function Skills() {
                              </h2>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima quaerat aliquid, totam molestias nobis quis hic eaque facilis, culpa tempore quibusdam, cupiditate blanditiis alias iure sapiente eveniet obcaecati reiciendis consequatur.</p>
                         </div>
-                        <Carousel responsive={responsive} infinite={true} className='skill-slider'>
+                        <Carousel responsive={responsive} infinite={true} className='skill-slider' autoPlay={true}
+                            autoPlaySpeed={1000}>
                             <div className="item">
                                 <img src={meter1} alt="" />
                                 <h5>Cinema 4D</h5>
