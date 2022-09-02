@@ -332,7 +332,11 @@ a {
 }
 
 .heading {
-  min-height: 130px !important;
+  min-height: 80px !important;
+}
+
+.wrap {
+  padding-bottom: 20px !important
 }
 
 /* Skills */
@@ -382,6 +386,8 @@ a {
   align-items: center;
   justify-content: center;
 }
+
+
 
 /* Project */
 
